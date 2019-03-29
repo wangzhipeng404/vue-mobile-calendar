@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <calendar
+      @change="onChange"
+      :selectable="selectableList"
+      :contents="contents"
+      :mode="mode"
+      :month-num="12"
+      :start-date="'2019-01-01'"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Calendar from './components/Calendar.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    Calendar,
   },
-};
-</script>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  data() {
+    return {
+      selectableList: null,
+      selected: [],
+      start: '',
+      end: '',
+      now: new Date(),
+    }
+  },
+  computed: {
+    contents() {
+      return {}
+    },
+    mode() {
+      return 'range'
+    },
+  },
+  methods: {
+    onChange(selected, day) {
+      console.log(selected, day)
+    },
+  },
 }
-</style>
+</script>

@@ -1,13 +1,21 @@
 {
-  "name": "vue-hotel-calendar",
+  "name": "vue-mobile-calendar",
   "version": "0.1.0",
-  "private": true,
+  "description": "vue-移动端-旅行预订类-日历组件",
+  "author": "wangzhipeng404 <wangzhipeng404@gmail.com>",
+  "license": "MIT",
+  "main": "dist/vue-hotel-calendar.umd.min.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-mobile-calendar src/components/Calendar.vue",
+    "build-app": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "fecha": "^3.0.2",
     "vue": "^2.6.6"
   },
   "devDependencies": {
