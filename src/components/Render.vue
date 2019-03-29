@@ -20,7 +20,7 @@
             @click="onSelect(day)"
           >
             <div class="day-text">{{day.day}}</div>
-            <div class="content-wrap">
+            <div class="content-wrap" v-if="day.contents">
               <div class="content-text" v-for="content in day.contents" :key="content">
                 {{content}}
               </div>

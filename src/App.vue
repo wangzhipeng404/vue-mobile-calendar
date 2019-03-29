@@ -3,7 +3,6 @@
     <calendar
       @change="onChange"
       :selectable="selectableList"
-      :contents="contents"
       :mode="mode"
       :month-num="12"
       :start-date="'2019-01-01'"

@@ -28,7 +28,7 @@ export default {
     },
     contents: {
       type: Object,
-      default: () => {},
+      default: () => ({}),
     },
     mode: {
       type: String,
@@ -119,7 +119,7 @@ export default {
             d.compareToday === 0 ? 'today' : '',
             this.selectedList.includes(d.str) ? 'selected' : '',
           ].filter(c => c).join(' ')
-          d.contents = this.contents[d.str] || []
+          d.contents = this.contents && (this.contents[d.str] || [])
           return d
         })
         return m
