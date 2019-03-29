@@ -1,16 +1,16 @@
 {
-  "name": "vue-mobile-calendar",
+  "name": "vue-mobile-tour-calendar",
   "version": "0.1.0",
   "description": "vue-移动端-旅行预订类-日历组件 兼容mpvue",
   "author": "wangzhipeng404 <wangzhipeng404@gmail.com>",
   "license": "MIT",
-  "main": "dist/VueMobileCalendar.umd.min.js",
+  "main": "dist/VueMobileTourCalendar.umd.min.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name VueMobileCalendar src/components/Calendar.vue",
+    "build": "vue-cli-service build --target lib --name VueMobileTourCalendar src/components/Calendar.vue",
     "build-app": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
