@@ -1,4 +1,4 @@
-# vue-hotel-calendar
+# vue-hotel-tour-calendar
 
 ## Props/Options
 
